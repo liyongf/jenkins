@@ -1,0 +1,6 @@
+
+server:
+  port: 9000
+  servlet.context-path: "/httpclient"
+
+ip: 47.92.93.226
