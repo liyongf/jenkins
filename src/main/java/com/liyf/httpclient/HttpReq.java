@@ -247,7 +247,15 @@ public class HttpReq {
         file.delete();
         return true;
     }
-
+    public static boolean deleteWar(String path) {
+        File file = new File(path);
+        if (!file.exists()) {//判断是否待删除目录是否存在
+            log.error("The dir are not exists!" + path);
+            return false;
+        }
+        file.delete();
+        return true;
+    }
     public static String getRemoteIP(HttpServletRequest request) {
         String ip = null;
         if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {

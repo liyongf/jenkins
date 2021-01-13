@@ -69,6 +69,9 @@ public class Tomcat {
 
                         //开始删除
                         HttpReq.deleteDir(path);
+                        //开始删除war包
+                        String warPath= path = basePath + "\\" + file.getName() + "\\webapps\\" + dir+".war";
+                        HttpReq.deleteWar(warPath);
                         log.info("Sucess to delete " + path);
                     }
                 }
